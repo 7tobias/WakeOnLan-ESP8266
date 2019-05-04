@@ -31,7 +31,7 @@ void WakeOnLan::sendWOL(IPAddress addr, WiFiUDP udp, byte * mac,  size_t size_of
     byte preamble[] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
     byte i;
 
-    udp.beginPacket(addr, 9); //sending packet at 9, 
+    udp.beginPacket(addr, 0); //sending packet at 9, 
 	
     udp.write(preamble, sizeof preamble);
     
